@@ -1,19 +1,31 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
-  const [contextMessage, setContextMessage] = useState('');
+  const [categories, setCategories] = useState([]);
 
-  const contextMethod = () => {
-    setContextMessage('Hello from client/src/context/AppContext.jsx');
-  };
+  useEffect(() => {
+    const categoriesUrl =
+      'https://www.themealdb.com/api/json/v1/1/categories.php';
+    fetch(categoriesUrl)
+      .then((data) => {
+        return data.json();
+      })
+      .then((res) => {
+        console.log(res);
+        setCategories(res);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
 
   return (
     <AppContext.Provider
       value={{
-        contextMessage,
-        contextMethod
+        categories,
+        setCategories
       }}
     >
       {children}
