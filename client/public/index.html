@@ -5,6 +5,11 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <script
+      src="https://kit.fontawesome.com/a0a7e04d4a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="App.css" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -19,11 +24,73 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Hangry Recipes</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div id="theSidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="#">Categories</a>
+      <a href="#">Search By Main Ingredient</a>
+      <a href="#">Recipes By Area</a>
+      <a href="#">Find a Random Meal</a>
+    </div>
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </div>
+    <script type="text/javascript">
+      function openNav() {
+        document.getElementById('theSidebar').style.width = '250px';
+        document.getElementById('main').style.marginLeft = '250px';
+      }
+      function closeNav() {
+        document.getElementById('theSidebar').style.width = '0';
+        document.getElementById('main').style.marginLeft = '0';
+      }
+    </script>
+
+    <section>
+      <h1 id="title">Hangry Recipes</h1>
+    </section>
+    <div class="hero-image">
+      <div class="main-searchbar">
+        <h2>Search For a Recipe</h2>
+        <i class="fas fa-search"></i>
+        <input id="main-search-input" type="text" label="search" />
+        <button id="main-search-btn">Choose For Me</button>
+      </div>
+    </div>
+
+    <div class="search-content">
+      <div class="top-search-box">
+        <input
+          id="top-search-input"
+          type="text"
+          class="search-bar-input"
+          placeholder="search"
+          label="search"
+        />
+        <button id="search-icon-button"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+    <section>
+      <h2 id="feat-cat">Featured Categories</h2>
+      <div class="rows-front-page">
+        <div class="columns-cat">Chicken</div>
+        <div class="columns-cat">Pasta</div>
+        <div class="columns-cat">Seafood</div>
+        <div class="columns-cat">Vegetarian</div>
+      </div>
+      <h2 id="new-recipes">New Recipes</h2>
+      <div class="rows-front-page">
+        <div class="columns-cat">Teriyaki Chicken Casserole</div>
+        <div class="columns-cat">Recheado Masala Fish</div>
+        <div class="columns-cat">Prawn & Fennel Bisque</div>
+        <div class="columns-cat">Koshari</div>
+      </div>
+    </section>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
