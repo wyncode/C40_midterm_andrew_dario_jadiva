@@ -13,7 +13,6 @@ export const AppContextProvider = ({ children }) => {
         return data.json();
       })
       .then((res) => {
-        console.log(res);
         setCategories(res);
       })
       .catch((e) => {

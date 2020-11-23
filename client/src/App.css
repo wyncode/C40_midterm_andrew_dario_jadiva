@@ -141,3 +141,12 @@ body {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.main-container {
+  margin: auto;
+  width: calc(100vw - 260px);
+}
+.search-results {
+  margin: auto;
+  width: calc(100vw - 260px);
+}
