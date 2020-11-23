@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Home from './components/Home';
 import { AppContextProvider } from './context/AppContext';
 import './App.css';
 
@@ -16,8 +17,7 @@ const App = () => {
   return (
     <AppContextProvider>
       <div id="demo">
-        <h3></h3>
-        <h3>{}</h3>
+        <Home />
       </div>
     </AppContextProvider>
   );
