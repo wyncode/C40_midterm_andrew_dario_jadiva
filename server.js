@@ -6,13 +6,13 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-app.get('/api/demo', (request, response) => {
-  response.json({
-    message: 'Hello from server.js'
-  });
-});
-// END DEMO
+// // JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
+// app.get('/api/demo', (request, response) => {
+//   response.json({
+
+//   });
+// });
+// // END DEMO
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files

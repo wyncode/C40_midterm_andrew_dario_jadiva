@@ -1,26 +1,41 @@
 import React, { useState, useEffect } from 'react';
-import { AppContextProvider } from './context/AppContext';
-
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './components/Home';
+import SearchResults from './components/SearchResults';
+import Recipe from './components/Recipe';
 import './App.css';
+import SideNavbar from './components/SideNavbar';
 
 const App = () => {
-  const [serverMessage, setServerMessage] = useState('');
-
-  const fetchDemoData = () => {
-    fetch('/api/demo')
-      .then((response) => response.json())
-      .then((data) => setServerMessage(data.message));
-  };
-
-  useEffect(fetchDemoData, []);
+  const [searchResults, setSearchResults] = useState([]);
 
   return (
-    <AppContextProvider>
-      <div id="demo">
-        <h3>Hello from client/src/App.js</h3>
-        <h3>{serverMessage}</h3>
+    <BrowserRouter>
+      <SideNavbar />
+      <div className="main-container">
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={(props) => (
+              <Home setSearchResults={setSearchResults} {...props} />
+            )}
+          />
+          <Route
+            exact
+            path="/meal/:id"
+            render={(props) => <Recipe {...props} />}
+          />
+          <Route
+            exact
+            path="/results"
+            render={(props) => (
+              <SearchResults searchResults={searchResults} {...props} />
+            )}
+          />
+        </Switch>
       </div>
-    </AppContextProvider>
+    </BrowserRouter>
   );
 };
 
