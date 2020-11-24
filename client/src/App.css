@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quando&display=swap');
 body {
   font-family: 'Quando', serif;
+  background-color: snow;
 }
 #title {
   color: #e84d4d;
@@ -20,8 +21,12 @@ body {
 .main-searchbar {
   text-align: center;
   position: absolute;
-  width: 25%;
-  height: 25%;
+  margin-left: 33%;
+  margin-right: 25;
+  margin-top: 23%;
+  margin-bottom: 35%;
+  width: 35%;
+  height: 30%;
   text-align: center;
   background-color: rgb(255, 255, 255, 0.8);
   border-radius: 20px;
@@ -64,7 +69,7 @@ body {
   padding: 0 0.5em;
 }
 .sidebar {
-  height: 100%;
+  height: 50%;
   width: 0;
   position: fixed;
   z-index: 1;
@@ -119,10 +124,13 @@ body {
   }
 }
 .columns-cat {
+  background-color: ivory;
+  border-radius: 50%;
+  border: 1px solid black;
   padding: 100px;
   float: left;
   width: 10%;
-  margin: 0;
+  margin: 5px;
 }
 .rows-front-page {
   display: flex;
@@ -130,10 +138,12 @@ body {
   margin: 0;
 }
 #feat-cat {
+  border-top: 1px solid blue;
   margin-top: 25px;
   margin-bottom: 0;
 }
 #new-recipes {
+  border-top: 1px solid blue;
   margin-top: 25px;
   margin-bottom: 0;
 }

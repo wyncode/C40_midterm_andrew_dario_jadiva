@@ -7,7 +7,7 @@ const Categories = () => {
     <section>
       <h2 id="feat-cat">Featured Categories</h2>
       <div className="rows-front-page">
-        <div className="columns-cat">Chicken</div>
+        <div className="columns-cat">Poultry</div>
         <div className="columns-cat">Pasta</div>
         <div className="columns-cat">Seafood</div>
         <div className="columns-cat">Vegetarian</div>
