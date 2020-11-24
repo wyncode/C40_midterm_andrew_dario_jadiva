@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import RecipeCards from './RecipeCards';
+
 const SearchResults = ({ searchResults }) => {
   return (
     <div className="search-results">
       {searchResults?.map((result) => {
+        console.log(result);
         return (
-          <div key={result.idMeal}>
-            <Link to={`/meal/${result.idMeal}`}>
-              <div>{result.strMeal}</div>
-            </Link>
-            <div>{result.strArea}</div>
-            <img src={result.strMealThumb} alt={result.strMeal} />
+          <div className="container">
+            <RecipeCards cardData={result} />
+            <div key={result.idMeal}>
+              <div>{result.strArea}</div>
+            </div>
           </div>
         );
       })}

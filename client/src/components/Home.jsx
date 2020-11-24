@@ -6,18 +6,6 @@ import SideNavbar from './SideNavbar';
 const Home = ({ setSearchResults }) => {
   return (
     <>
-      {/* <div id="theSidebar" className="sidebar">
-      <a href="javascript:void(0)" className="closebtn" onclick="closeNav()"
-        >&times;</a
-      >
-      <a href="#">Categories</a>
-      <a href="#">Search By Main Ingredient</a>
-      <a href="#">Recipes By Area</a>
-      <a href="#">Find a Random Meal</a>
-    </div>
-    <div id="main">
-      <button className="openbtn" onclick="openNav()">&#9776;</button>
-    </div> */}
       <section>
         <h1 id="title">Hangry Recipes</h1>
       </section>
