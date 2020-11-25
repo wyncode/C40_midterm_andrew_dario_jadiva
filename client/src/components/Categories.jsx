@@ -5,14 +5,14 @@ const Categories = () => {
 
   return (
     <section>
-      <h2 id="feat-cat">Featured Categories</h2>
+      <h3 id="feat-cat">Featured Categories</h3>
       <div className="rows-front-page">
         <div className="columns-cat">Chicken</div>
         <div className="columns-cat">Pasta</div>
         <div className="columns-cat">Seafood</div>
         <div className="columns-cat">Vegetarian</div>
       </div>
-      <h2 id="new-recipes">New Recipes</h2>
+      <h3 id="new-recipes">New Recipes</h3>
       <div className="rows-front-page">
         <div className="columns-cat">Teriyaki Chicken Casserole</div>
         <div className="columns-cat">Recheado Masala Fish</div>

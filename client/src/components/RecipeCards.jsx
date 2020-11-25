@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom';
 
 const RecipeCards = ({ cardData }) => {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={cardData.strMealThumb} />
-      <Card.Body>
-        <Card.Title>Result name</Card.Title>
-        <Link to={`/meal/${cardData.idMeal}`}>
-          <Button variant="primary">{cardData.strMeal}</Button>
-        </Link>
-      </Card.Body>
-    </Card>
+    <div className="card-container">
+      <Card style={{ width: '18rem', margin: '10px' }}>
+        <Card.Img variant="top" src={cardData.strMealThumb} />
+        <Card.Body className="card-body">
+          <Card.Text>{cardData.strMeal}</Card.Text>
+          <Link to={`/meal/${cardData.idMeal}`}>
+            <Button variant="outline-primary">Get Recipe</Button>
+          </Link>
+        </Card.Body>
+      </Card>
+    </div>
   );
 };
 export default RecipeCards;

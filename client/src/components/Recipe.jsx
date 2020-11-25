@@ -21,7 +21,14 @@ const Recipe = () => {
       {recipe?.map((el) => {
         return (
           <div key={el.mealId}>
-            <img src={el.strMealThumb} alt={el.strMeal} />
+            <h2 className="meal-title">{el.strMeal}</h2>
+            <img
+              className="img-recipe"
+              src={el.strMealThumb}
+              alt={el.strMeal}
+            />
+            <h3 className="instructions-recipe">Instructions</h3>
+            <p className="recipe-instructions">{el.strInstructions}</p>
           </div>
         );
       })}
