@@ -8,16 +8,16 @@ const Categories = () => {
       <h2 id="feat-cat">Featured Categories</h2>
       <div className="rows-front-page">
         <div className="columns-cat">Chicken</div>
-        <div className="columns-cat">Pasta</div>
-        <div className="columns-cat">Seafood</div>
-        <div className="columns-cat">Vegetarian</div>
+        <div className="pasta-cat">Pasta</div>
+        <div className="seafood-cat">Seafood</div>
+        <div className="vegetarian-cat">Vegetarian</div>
       </div>
       <h2 id="new-recipes">New Recipes</h2>
       <div className="rows-front-page">
-        <div className="columns-cat">Teriyaki Chicken Casserole</div>
-        <div className="columns-cat">Recheado Masala Fish</div>
-        <div className="columns-cat">Prawn & Fennel Bisque</div>
-        <div className="columns-cat">Koshari</div>
+        <div className="teriyaki-cat">Teriyaki Chicken Casserole</div>
+        <div className="recheado-cat">Recheado Masala Fish</div>
+        <div className="prawn-cat">Prawn & Fennel Bisque</div>
+        <div className="kos-cat">Koshari</div>
       </div>
     </section>
   );

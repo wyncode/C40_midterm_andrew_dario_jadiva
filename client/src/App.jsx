@@ -5,7 +5,6 @@ import SearchResults from './components/SearchResults';
 import Recipe from './components/Recipe';
 import './App.css';
 import SideNavbar from './components/SideNavbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import RecipeCards from './components/RecipeCards';
 
 const App = () => {
