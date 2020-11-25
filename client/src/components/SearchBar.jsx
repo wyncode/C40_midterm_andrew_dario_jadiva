@@ -20,18 +20,20 @@ const SearchBar = ({ setSearchResults }) => {
       });
   };
   return (
-    <div className="main-searchbar">
-      <h2>Search For a Recipe</h2>
-      <i className="fas fa-search"></i>
-      <form onSubmit={handleSubmit}>
-        <input
-          onChange={(e) => setSearch(e.target.value)}
-          id="main-search-input"
-          type="text"
-          label="search"
-        />
-      </form>
-      <button id="main-search-btn">Choose For Me</button>
+    <div className="containerSearch">
+      <div className="main-searchbar">
+        <h2>Search For a Recipe</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            onChange={(e) => setSearch(e.target.value)}
+            id="main-search-input"
+            type="text"
+            label="search"
+          />
+        </form>
+        <button id="main-search-btn">Search</button>
+        <button id="feeling-lucky-btn">Choose For Me</button>
+      </div>
     </div>
   );
 };
