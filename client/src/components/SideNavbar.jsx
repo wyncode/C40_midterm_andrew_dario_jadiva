@@ -20,11 +20,11 @@ const SideNavbar = () => {
       <SideNav.Nav></SideNav.Nav>
       <SideNav.Nav defaultSelected="home">
         <NavItem eventKey="home">
-          <NavIcon>
-            <i
-              className="fa fa-fw fa-home"
-              style={{ fontSize: '1.75em', color: 'black' }}
-            />
+          <NavIcon style={{ color: 'white' }}>
+            <a href="/">
+              <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em', color: 'white' }} />
+            </a>
+
           </NavIcon>
           <NavText style={{ color: 'black' }}>Home</NavText>
         </NavItem>
